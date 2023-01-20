@@ -22,12 +22,12 @@ jobs:
       - name: Git checktout
         uses: actions/checkout@v3
       
-      - name: Configure AWS credentials from AWS account
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          role-to-assume: ${{ secrets.AWS_ROLE }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          role-skip-session-tagging: true
+      # - name: Configure AWS credentials from AWS account
+      #   uses: aws-actions/configure-aws-credentials@v1
+      #   with:
+      #     role-to-assume: ${{ secrets.AWS_ROLE }}
+      #     aws-region: ${{ secrets.AWS_REGION }}
+      #     role-skip-session-tagging: true
       
       - name: helm-check
         uses: igabaydulin/helm-check-action@0.1.4
